@@ -16,7 +16,13 @@ const Hero: React.FC<HeroProps> = ({ darkMode, toggleDarkMode }) => {
     }
 
     return (
-        <section className='px-96 pt-40 dark:bg-dark max-h-screen'>
+        <section className='
+        2xl:px-96 2xl:pt-40 
+        xl:px-60 xl:pt-36 
+        lg:px-36 lg:pt-32 
+        md:px-24 md:pt-24 
+        sm:px-16 sm:pt-52 
+        dark:bg-dark max-h-screen'>
             <motion.h1
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}

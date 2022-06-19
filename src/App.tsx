@@ -1,25 +1,25 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from 'react';
+import Navbar from './Pages/Components/Navbar';
+import Home from './Pages/Home/Home';
+import { BrowserRouter, Routes, Route } from 'react-router-dom'
 
-function App() {
+const App: React.FC = () => {
+  const [darkMode, setDarkMode] = useState(false)
+  const [currentPage, setCurrentPage] = useState('home')
+
+  const toggleDarkMode = () => {
+    setDarkMode(!darkMode)
+  }
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <main className={`${darkMode && 'dark'} overflow-hidden`}>
+      <BrowserRouter>
+        <Navbar currentPage={currentPage} setCurrentPage={setCurrentPage} />
+        <Routes>
+          <Route path='/' element={<Home darkMode={darkMode} toggleDarkMode={toggleDarkMode} />} />
+        </Routes>
+      </BrowserRouter>
+    </main >
   );
 }
 

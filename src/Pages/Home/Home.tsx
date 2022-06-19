@@ -1,6 +1,8 @@
 import React from 'react'
 import About from './About'
 import Hero from './Hero'
+import Projects from './Projects'
+import Skills from './Skills'
 
 interface HomeProps {
     darkMode: boolean
@@ -12,6 +14,8 @@ const Home: React.FC<HomeProps> = ({ darkMode, toggleDarkMode }) => {
         <>
             <Hero darkMode={darkMode} toggleDarkMode={toggleDarkMode} />
             <About />
+            <Skills />
+            <Projects />
         </>
     )
 }

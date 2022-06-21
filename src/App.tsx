@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import Navbar from './Pages/Components/Navbar';
 import Home from './Pages/Home/Home';
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
+import Footer from './Pages/Components/Footer';
 
 const App: React.FC = () => {
   const [darkMode, setDarkMode] = useState(false)
@@ -12,12 +13,13 @@ const App: React.FC = () => {
   }
 
   return (
-    <main className={`${darkMode && 'dark'} overflow-hidden`}>
+    <main className={`${darkMode ? 'dark' : null} overflow-hidden`}>
       <BrowserRouter>
         <Navbar currentPage={currentPage} setCurrentPage={setCurrentPage} />
         <Routes>
           <Route path='/' element={<Home darkMode={darkMode} toggleDarkMode={toggleDarkMode} />} />
         </Routes>
+        <Footer />
       </BrowserRouter>
     </main >
   );

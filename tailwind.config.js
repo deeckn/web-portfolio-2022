@@ -10,8 +10,8 @@ module.exports = {
         'white': '#FFFFFF',
         'dark': '#1C1C1C',
         'gray': '#3A3A3B',
-        'purple': '#7D2BDF',
-        'pink': '#BC1ECA'
+        'primary': '#F46B45',
+        'secondary': '#EEA849'
       },
       minHeight: {
         'togglePanel': '75vh'

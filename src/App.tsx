@@ -1,11 +1,14 @@
 import React, { useState } from 'react';
-import Navbar from './Pages/Components/Navbar';
+import Navbar from './Components/Navbar';
 import Home from './Pages/Home/Home';
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
-import Footer from './Pages/Components/Footer';
+import Footer from './Components/Footer';
+import About from './Pages/About/About';
+import Projects from './Pages/Projects/Projects';
+import Contact from './Pages/Contact/Contact';
 
 const App: React.FC = () => {
-  const [darkMode, setDarkMode] = useState(false)
+  const [darkMode, setDarkMode] = useState(true)
   const [currentPage, setCurrentPage] = useState('home')
 
   const toggleDarkMode = () => {
@@ -18,6 +21,9 @@ const App: React.FC = () => {
         <Navbar currentPage={currentPage} setCurrentPage={setCurrentPage} />
         <Routes>
           <Route path='/' element={<Home darkMode={darkMode} toggleDarkMode={toggleDarkMode} />} />
+          <Route path='/about' element={<About />} />
+          <Route path='/projects' element={<Projects />} />
+          <Route path='/contact' element={<Contact />} />
         </Routes>
         <Footer />
       </BrowserRouter>

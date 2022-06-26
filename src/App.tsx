@@ -8,27 +8,27 @@ import Projects from './Pages/Projects/Projects';
 import Contact from './Pages/Contact/Contact';
 
 const App: React.FC = () => {
-  const [darkMode, setDarkMode] = useState(true)
-  const [currentPage, setCurrentPage] = useState('home')
+    const [darkMode, setDarkMode] = useState(true)
+    const [currentPage, setCurrentPage] = useState('home')
 
-  const toggleDarkMode = () => {
-    setDarkMode(!darkMode)
-  }
+    const toggleDarkMode = () => {
+        setDarkMode(!darkMode)
+    }
 
-  return (
-    <main className={`${darkMode ? 'dark' : null} overflow-hidden`}>
-      <BrowserRouter>
-        <Navbar currentPage={currentPage} setCurrentPage={setCurrentPage} />
-        <Routes>
-          <Route path='/' element={<Home darkMode={darkMode} toggleDarkMode={toggleDarkMode} />} />
-          <Route path='/about' element={<About />} />
-          <Route path='/projects' element={<Projects />} />
-          <Route path='/contact' element={<Contact />} />
-        </Routes>
-        <Footer />
-      </BrowserRouter>
-    </main >
-  );
+    return (
+        <main className={`${darkMode ? 'dark' : null} overflow-hidden`}>
+            <BrowserRouter>
+                <Navbar currentPage={currentPage} setCurrentPage={setCurrentPage} />
+                <Routes>
+                    <Route path='/' element={<Home darkMode={darkMode} toggleDarkMode={toggleDarkMode} />} />
+                    <Route path='/about' element={<About />} />
+                    <Route path='/projects' element={<Projects />} />
+                    <Route path='/contact' element={<Contact />} />
+                </Routes>
+                <Footer />
+            </BrowserRouter>
+        </main >
+    );
 }
 
 export default App;

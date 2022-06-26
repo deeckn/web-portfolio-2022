@@ -1,24 +1,24 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
-import { sectionPadding } from '../../theme'
+import { headerThreeFontSize } from '../theme'
 import ContactLink from './ContactLink'
 
 const Footer: React.FC = () => {
     return (
-        <footer className={`bg-dark pb-20 dark:bg-gray ${sectionPadding}`}>
-            <div className='flex gap-36 flex-col md:flex-row'>
+        <footer className={`bg-dark pb-20 dark:bg-gray 2xl:px-96 xl:px-60 xl:pt-24 lg:px-32 md:px-24 md:pt-16 sm:p-16 py-12 px-8`}>
+            <div className='flex md:gap-36 gap-16 flex-col md:flex-row'>
                 <section>
-                    <h4 className='mb-8 text-4xl font-bold text-white'>Navigate<span className='text-pink'>.</span></h4>
+                    <h3 className={`mb-8 font-bold text-white ${headerThreeFontSize}`}>Navigate<span className='text-secondary'>.</span></h3>
                     <ul>
-                        <li className='mt-4'><Link to='/' className='font-bold text-xl text-white hover:bg-gray duration-300 rounded-lg hover:px-4 hover:py-2 dark:hover:bg-dark'>Home</Link></li>
-                        <li className='mt-4'><Link to='/' className='font-bold text-xl text-white hover:bg-gray duration-300 rounded-lg hover:px-4 hover:py-2 dark:hover:bg-dark'>About</Link></li>
-                        <li className='mt-4'><Link to='/' className='font-bold text-xl text-white hover:bg-gray duration-300 rounded-lg hover:px-4 hover:py-2 dark:hover:bg-dark'>Projects</Link></li>
-                        <li className='mt-4 mb-16'><Link to='/' className='font-bold text-xl text-white hover:bg-gray duration-300 rounded-lg hover:px-4 hover:py-2 dark:hover:bg-dark'>Contact</Link></li>
+                        <li className='mt-4'><Link to='/' className='text-xl text-white hover:bg-gray duration-300 rounded-lg hover:px-4 hover:py-2 dark:hover:bg-dark'>Home</Link></li>
+                        <li className='mt-4'><Link to='/' className='text-xl text-white hover:bg-gray duration-300 rounded-lg hover:px-4 hover:py-2 dark:hover:bg-dark'>About</Link></li>
+                        <li className='mt-4'><Link to='/' className='text-xl text-white hover:bg-gray duration-300 rounded-lg hover:px-4 hover:py-2 dark:hover:bg-dark'>Projects</Link></li>
+                        <li className='mt-4'><Link to='/' className='text-xl text-white hover:bg-gray duration-300 rounded-lg hover:px-4 hover:py-2 dark:hover:bg-dark'>Contact</Link></li>
                     </ul>
                 </section>
 
                 <section>
-                    <h4 className='mb-8 text-4xl font-bold text-white'>Contact<span className='text-pink'>.</span></h4>
+                    <h3 className={`mb-8 font-bold text-white ${headerThreeFontSize}`}>Contact<span className='text-secondary'>.</span></h3>
                     <ul>
                         <ContactLink
                             variant='email'

@@ -6,7 +6,7 @@ import ProjectCard from '../../Components/ProjectCard'
 
 const Projects: React.FC = () => {
     return (
-        <section className={`bg-white pb-20 dark:bg-dark ${sectionPadding}`}>
+        <section className={`bg-smoke pb-20 dark:bg-dark ${sectionPadding}`}>
             <h2 className={`${headerTwoFontSize} font-bold text-dark dark:text-white lg:mb-16 mb-8`}>Projects<span className='text-secondary'>.</span></h2>
             <div className='lg:grid lg:grid-cols-2 lg:gap-16 justify-between flex flex-col items-center gap-8'>
                 <ProjectCard

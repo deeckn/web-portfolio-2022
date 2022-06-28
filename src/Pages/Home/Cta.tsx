@@ -4,7 +4,7 @@ import ContactLink from '../../Components/ContactLink'
 
 const Cta: React.FC = () => {
     return (
-        <section className={`bg-white pb-20 dark:bg-dark ${sectionPadding}`}>
+        <section className={`bg-smoke pb-20 dark:bg-dark ${sectionPadding}`}>
             <h2 className={`${headerTwoFontSize} text-dark font-bold dark:text-white lg:mb-16 mb-8`}>Interested<span className='text-secondary'>?</span></h2>
             <ul>
                 <ContactLink

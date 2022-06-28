@@ -7,7 +7,7 @@ const Skills: React.FC = () => {
     const iconSize = 'lg:text-9xl md:text-8xl sm:text-7xl text-5xl'
 
     return (
-        <section className={`bg-white dark:bg-dark ${sectionPadding} pb-8`}>
+        <section className={`bg-smoke dark:bg-dark ${sectionPadding} pb-8`}>
             <h2 className={`${headerTwoFontSize} font-bold text-dark dark:text-white lg:mb-16 mb-8`}>Technical Skills<span className='text-secondary'>.</span></h2>
             <div className='text-dark dark:text-white'>
                 <ul className='flex justify-between items-center'>

@@ -4,12 +4,12 @@ import Controls from './Controls'
 import { motion } from 'framer-motion'
 import { headerOneFontSize, homePageLinkFontSize, sectionPadding } from '../../theme'
 
-interface HeroProps {
+export interface DarkMode {
     darkMode: boolean
     toggleDarkMode: () => void
 }
 
-const Hero: React.FC<HeroProps> = ({ darkMode, toggleDarkMode }) => {
+const Hero: React.FC<DarkMode> = ({ darkMode, toggleDarkMode }) => {
     const [titleVariant, setTitleVariant] = useState(false)
 
     const toggleTitleVariant = () => {

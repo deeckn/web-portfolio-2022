@@ -6,6 +6,8 @@ export const headerTwoFontSize = 'lg:text-5xl md:text-4xl text-3xl'
 
 export const headerThreeFontSize = 'lg:text-4xl md:text-3xl text-2xl'
 
+export const headerFourFontSize = 'lg:text-3xl md:text-2xl text-xl'
+
 export const homePageLinkFontSize = 'lg:text-2xl md:text-xl text-lg'
 
-export const paragraphFontSize = 'lg:text-xl text-md'
+export const paragraphFontSize = 'lg:text-lg text-md'

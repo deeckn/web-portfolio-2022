@@ -2,16 +2,11 @@ import React from 'react'
 import About from './About'
 import Background from './Background'
 import Cta from './Cta'
-import Hero from './Hero'
+import Hero, { DarkMode } from './Hero'
 import Projects from './Projects'
 import Skills from './Skills'
 
-interface HomeProps {
-    darkMode: boolean
-    toggleDarkMode: () => void
-}
-
-const Home: React.FC<HomeProps> = ({ darkMode, toggleDarkMode }) => {
+const Home: React.FC<DarkMode> = ({ darkMode, toggleDarkMode }) => {
     return (
         <>
             <Hero darkMode={darkMode} toggleDarkMode={toggleDarkMode} />

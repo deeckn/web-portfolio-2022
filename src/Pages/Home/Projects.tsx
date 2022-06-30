@@ -1,10 +1,18 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import { FaArrowRight } from 'react-icons/fa'
 import { Link } from 'react-router-dom'
 import { headerTwoFontSize, homePageLinkFontSize, sectionPadding } from '../../theme'
 import ProjectCard from '../../Components/ProjectCard'
+import { CurrentPageContext } from '../../Context/CurrentPageContext'
 
 const Projects: React.FC = () => {
+    const { setCurrentPage } = useContext(CurrentPageContext)
+
+    const handleClick = () => {
+        window.scrollTo({ top: 0, behavior: 'smooth' })
+        setCurrentPage('projects')
+    }
+
     return (
         <section className={`bg-smoke pb-20 dark:bg-dark ${sectionPadding}`}>
             <h2 className={`${headerTwoFontSize} font-bold text-dark dark:text-white lg:mb-16 mb-8`}>Projects<span className='text-secondary'>.</span></h2>
@@ -30,7 +38,10 @@ const Projects: React.FC = () => {
                     githubUrl='/' />
             </div>
 
-            <Link to="/projects" className={`flex items-center gap-1 w-full justify-end mt-16 text-primary hover:underline font-bold ${homePageLinkFontSize}`}>View more projects<FaArrowRight /></Link>
+            <Link
+                to="/projects"
+                className={`flex items-center gap-1 w-full justify-end mt-16 text-primary hover:underline font-bold ${homePageLinkFontSize}`}
+                onClick={handleClick}>View more projects<FaArrowRight /></Link>
         </section>
     )
 }

@@ -1,11 +1,18 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import { FaArrowRight } from 'react-icons/fa'
 import { Link } from 'react-router-dom'
+import { CurrentPageContext } from '../../Context/CurrentPageContext'
 import { headerTwoFontSize, homePageLinkFontSize, paragraphFontSize, sectionPadding } from '../../theme'
 
-// TODO: Context Manager for darkMode, toggleDarkMode, setCurrentPage
-
 const About: React.FC = () => {
+
+    const { setCurrentPage } = useContext(CurrentPageContext)
+
+    const handleClick = () => {
+        window.scrollTo({ top: 0, behavior: 'smooth' })
+        setCurrentPage('about')
+    }
+
     return (
         <section className={`bg-smoke 2xl:pb-20 dark:bg-dark ${sectionPadding}`}>
             <h2 className={`${headerTwoFontSize} text-dark font-bold dark:text-white lg:mb-16 mb-8`}>About<span className='text-secondary'>.</span></h2>
@@ -14,7 +21,7 @@ const About: React.FC = () => {
             <Link
                 to="/about"
                 className={`flex items-center gap-1 w-full justify-end mt-8 text-primary hover:underline font-bold ${homePageLinkFontSize}`}
-                onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}>
+                onClick={handleClick}>
                 Learn more<FaArrowRight />
             </Link>
         </section >

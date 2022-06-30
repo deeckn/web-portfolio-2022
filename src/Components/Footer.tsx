@@ -1,11 +1,18 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import { Link } from 'react-router-dom'
+import { CurrentPageContext } from '../Context/CurrentPageContext'
 import { headerThreeFontSize } from '../theme'
 import ContactLink from './ContactLink'
 
 const Footer: React.FC = () => {
+    const { setCurrentPage } = useContext(CurrentPageContext)
+
+    const handleClick = (page: string) => {
+        window.scrollTo({ top: 0, behavior: 'smooth' })
+        setCurrentPage(page)
+    }
+
     const NavlinkStyles = 'text-xl text-white hover:bg-gray duration-300 rounded-lg hover:px-4 hover:py-2 dark:hover:bg-dark'
-    const scrollToTop = () => window.scrollTo({ top: 0, behavior: 'smooth' })
 
     return (
         <footer className={`bg-dark pb-20 dark:bg-gray 2xl:px-96 xl:px-60 xl:pt-24 lg:px-32 md:px-24 md:pt-16 sm:p-16 py-12 px-8`}>
@@ -14,10 +21,10 @@ const Footer: React.FC = () => {
                     <h3 className={`mb-8 font-bold text-white ${headerThreeFontSize}`}>Navigate<span className='text-secondary'>.</span></h3>
                     <nav>
                         <ul>
-                            <li className='mt-4'><Link to='/' className={NavlinkStyles} onClick={scrollToTop}>Home</Link></li>
-                            <li className='mt-4'><Link to='/about' className={NavlinkStyles} onClick={scrollToTop}>About</Link></li>
-                            <li className='mt-4'><Link to='/projects' className={NavlinkStyles} onClick={scrollToTop}>Projects</Link></li>
-                            <li className='mt-4'><Link to='/contact' className={NavlinkStyles} onClick={scrollToTop}>Contact</Link></li>
+                            <li className='mt-4'><Link to='/' className={NavlinkStyles} onClick={() => handleClick('home')}>Home</Link></li>
+                            <li className='mt-4'><Link to='/about' className={NavlinkStyles} onClick={() => handleClick('about')}>About</Link></li>
+                            <li className='mt-4'><Link to='/projects' className={NavlinkStyles} onClick={() => handleClick('projects')}>Projects</Link></li>
+                            <li className='mt-4'><Link to='/contact' className={NavlinkStyles} onClick={() => handleClick('contact')}>Contact</Link></li>
                         </ul>
                     </nav>
                 </section>

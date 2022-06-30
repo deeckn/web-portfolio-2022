@@ -7,7 +7,7 @@ const Hero: React.FC = () => {
     const { darkMode, toggleDarkMode } = useContext(DarkModeContext)
 
     return (
-        <section className={`${sectionPadding} bg-smoke dark:bg-dark flex flex-col items-center pb-32`}>
+        <section className={`${sectionPadding} bg-smoke dark:bg-dark flex flex-col items-center`}>
             <h1 className={`${headerOneFontSize} font-bold text-opacity-0 text-gray`}>
                 <span className='bg-clip-text bg-gradient-to-r from-primary to-secondary'>Projects</span>
             </h1>

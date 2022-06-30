@@ -60,7 +60,7 @@ const ContactLink: React.FC<IContactLinkProps> = ({ variant, text, url, size }) 
 
     return (
         <li className={`my-8 dark:text-white hover:underline ${size === 'footer' ? 'text-white' : null}`}>
-            <a href={url} className='flex items-center gap-4'>
+            <a href={url} target={"_blank"} className='flex items-center gap-4'>
                 {icon}
                 <p className={`${paragraphFontSize}`}>{text}</p>
             </a>

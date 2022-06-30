@@ -61,7 +61,7 @@ const Hero: React.FC = () => {
                         <a href='mailto:ckn.deesit@gmail.com?' className='flex items-center gap-1 hover:underline cursor-pointer'>Email<FaArrowRight /></a>
                     </li>
                     <li className={`font-bold text-primary ${homePageLinkFontSize}`}>
-                        <a href='https://www.linkedin.com/in/chakrin-deesit-076804209' className='flex items-center gap-1 hover:underline cursor-pointer'>Linkedin<FaArrowRight /></a>
+                        <a href='https://www.linkedin.com/in/chakrin-deesit-076804209' target={"_blank"} className='flex items-center gap-1 hover:underline cursor-pointer'>Linkedin<FaArrowRight /></a>
                     </li>
                 </ul>
             </motion.div>

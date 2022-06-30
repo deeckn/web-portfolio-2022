@@ -18,7 +18,7 @@ const Navbar: React.FC<NavbarProps> = ({ currentPage, setCurrentPage }) => {
     const NavLink: React.FC<NavLinkProps> = ({ path, text, current }) => {
         return <Link
             to={path}
-            className={`${current ? 'text-white' : 'text-gray'} lg:px-4 lg:mx-2 py-2 text-xl rounded-lg font-bold hover:text-white hover:bg-gray transition-colors duration-300`}>
+            className={`${current ? 'text-white' : 'text-gray'} lg:px-4 lg:mx-2 py-2 text-xl rounded-lg lg:font-bold hover:text-white hover:bg-gray transition-colors duration-300`}>
             {text}
         </Link>
     }

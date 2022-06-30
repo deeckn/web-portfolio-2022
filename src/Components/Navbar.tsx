@@ -25,7 +25,7 @@ const Navbar: React.FC = () => {
     return (
         <header>
             <nav className='flex flex-col py-6 bg-dark border-b-2 border-gray items-start md:px-24 sm:px-16 px-8 lg:flex-row lg:items-center lg:justify-between'>
-                <Link to="/" className='text-white lg:px-6 lg:py-2 text-xl rounded-md font-bold hover:bg-gray duration-300 hover:px-6 hover:py-2'>Chakrin D.</Link>
+                <Link to="/" className='text-white lg:px-6 lg:py-2 text-xl rounded-md font-bold hover:bg-gray duration-300 hover:px-6 hover:py-2' onClick={() => setCurrentPage('home')}>Chakrin D.</Link>
                 <ul className={`flex-col mt-4 lg:mt-0 lg:flex-row gap-4 lg:gap-0 ${isOpen ? 'flex' : 'hidden'} lg:flex`}>
                     <li onClick={() => setCurrentPage('home')}><NavLink path='/' text='Home' currentPage={currentPage === 'home'} /></li>
                     <li onClick={() => setCurrentPage('about')}><NavLink path='/about' text='About' currentPage={currentPage === 'about'} /></li>

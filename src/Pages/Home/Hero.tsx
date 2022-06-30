@@ -1,16 +1,13 @@
-import React, { useState } from 'react'
+import React, { useContext, useState } from 'react'
 import { FaArrowRight } from 'react-icons/fa'
 import Controls from './Controls'
 import { motion } from 'framer-motion'
 import { headerOneFontSize, homePageLinkFontSize, sectionPadding } from '../../theme'
+import { DarkModeContext } from '../../Context/DarkModeContext'
 
-export interface DarkMode {
-    darkMode: boolean
-    toggleDarkMode: () => void
-}
-
-const Hero: React.FC<DarkMode> = ({ darkMode, toggleDarkMode }) => {
+const Hero: React.FC = () => {
     const [titleVariant, setTitleVariant] = useState(false)
+    const { darkMode, toggleDarkMode } = useContext(DarkModeContext)
 
     const toggleTitleVariant = () => {
         setTitleVariant(!titleVariant)

@@ -1,9 +1,11 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import { headerOneFontSize, headerThreeFontSize, sectionPadding } from '../../theme'
 import { motion } from 'framer-motion'
-import { DarkMode } from '../Home/Hero'
+import { DarkModeContext } from '../../Context/DarkModeContext'
 
-const Hero: React.FC<DarkMode> = ({ darkMode, toggleDarkMode }) => {
+const Hero: React.FC = () => {
+    const { darkMode, toggleDarkMode } = useContext(DarkModeContext)
+
     return (
         <section className={`${sectionPadding} bg-smoke dark:bg-dark flex flex-col items-center pb-32`}>
             <h1 className={`${headerOneFontSize} font-bold text-opacity-0 text-gray`}>

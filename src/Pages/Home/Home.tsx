@@ -2,14 +2,14 @@ import React from 'react'
 import About from './About'
 import Background from './Background'
 import Cta from './Cta'
-import Hero, { DarkMode } from './Hero'
+import Hero from './Hero'
 import Projects from './Projects'
 import Skills from './Skills'
 
-const Home: React.FC<DarkMode> = ({ darkMode, toggleDarkMode }) => {
+const Home: React.FC = () => {
     return (
         <>
-            <Hero darkMode={darkMode} toggleDarkMode={toggleDarkMode} />
+            <Hero />
             <About />
             <Skills />
             <Projects />

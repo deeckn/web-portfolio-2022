@@ -1,8 +1,12 @@
 import React from 'react'
+import { DarkMode } from '../Home/Hero'
+import Hero from './Hero'
 
-const Projects: React.FC = () => {
+const Projects: React.FC<DarkMode> = ({ darkMode, toggleDarkMode }) => {
     return (
-        <div>Projects</div>
+        <>
+            <Hero darkMode={darkMode} toggleDarkMode={toggleDarkMode} />
+        </>
     )
 }
 

@@ -1,7 +1,7 @@
 import React from 'react'
 import { FaLinkedin, FaInstagram, FaGithubSquare } from 'react-icons/fa'
 import { HiOutlineMail } from 'react-icons/hi'
-import { headerFourFontSize, headerThreeFontSize, paragraphFontSize } from '../theme'
+import { headerFourFontSize, paragraphFontSize } from '../theme'
 
 
 interface IContactLinkProps {
@@ -50,7 +50,7 @@ const ContactLink: React.FC<IContactLinkProps> = ({ variant, text, url, size }) 
 
         return (
             <li className={`my-4 xl:my-8 text-dark dark:text-smoke hover:underline`}>
-                <a href={url} target={"_blank"} className='flex items-center gap-2 xl:gap-4'>
+                <a href={url} target={"_blank"} rel="noreferrer" className='flex items-center gap-2 xl:gap-4'>
                     {icon}
                     <p className={`${headerFourFontSize}`}>{text}</p>
                 </a>
@@ -60,7 +60,7 @@ const ContactLink: React.FC<IContactLinkProps> = ({ variant, text, url, size }) 
 
     return (
         <li className={`my-8 dark:text-white hover:underline ${size === 'footer' ? 'text-white' : null}`}>
-            <a href={url} target={"_blank"} className='flex items-center gap-4'>
+            <a href={url} target={"_blank"} rel="noreferrer" className='flex items-center gap-4'>
                 {icon}
                 <p className={`${paragraphFontSize}`}>{text}</p>
             </a>

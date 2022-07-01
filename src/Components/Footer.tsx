@@ -59,7 +59,7 @@ const Footer: React.FC = () => {
                 </section>
             </div>
 
-            <figcaption className='text-white mt-16'>&#169; 2022 <span className='font-bold'>Chakrin Deesit</span>. All rights reserved</figcaption>
+            <figcaption className='text-white mt-16'>&#169; {new Date().getFullYear()} <span className='font-bold'>Chakrin Deesit</span>. All rights reserved</figcaption>
         </footer>
     )
 }

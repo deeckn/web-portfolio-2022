@@ -35,7 +35,7 @@ const Projects: React.FC = () => {
                 <ProjectCard
                     title='Web Portfolio'
                     description="This portfolio website is created using React, Typescript, Tailwind, Framer Motion, Axios, and React Router."
-                    githubUrl='/' />
+                    githubUrl='https://github.com/deeckn/web-portfolio-2022' />
             </div>
 
             <Link

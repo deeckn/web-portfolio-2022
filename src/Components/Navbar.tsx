@@ -15,7 +15,8 @@ const Navbar: React.FC = () => {
     const NavLink: React.FC<NavLinkProps> = ({ path, text, currentPage }) => {
         return <Link
             to={path}
-            className={`${currentPage ? 'text-white' : 'text-gray'} lg:px-4 lg:mx-2 py-2 text-xl rounded-lg lg:font-bold hover:text-white hover:bg-gray transition-colors duration-300`}>
+            className={`${currentPage ? 'text-white' : 'text-gray'} lg:px-4 lg:mx-2 py-2 text-xl rounded-lg lg:font-bold hover:text-white hover:bg-gray transition-colors duration-300`}
+            onClick={() => setIsOpen(false)}>
             {text}
         </Link>
     }

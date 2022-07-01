@@ -27,7 +27,7 @@ const Activities: React.FC = () => {
 
             <ActivitySection
                 title='Teaching Assistant at '
-                highlightTitle='Agoda'
+                highlightTitle='KMITL'
                 description='Supervise laboratory activities and homework.'
                 textPosition='right'
                 pictureOne={KmitlPictureOne}

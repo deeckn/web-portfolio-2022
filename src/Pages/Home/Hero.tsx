@@ -23,7 +23,7 @@ const Hero: React.FC = () => {
                     duration: 1,
                     delay: 0
                 }}
-                className={`${headerOneFontSize} font-bold text-dark dark:text-white`}>{!titleVariant ? "Chakrin" : "Call Me"}</motion.h1>
+                className={`${headerOneFontSize} font-bold text-dark dark:text-white cursor-default`}>{!titleVariant ? "Chakrin" : "Call Me"}</motion.h1>
             <motion.h1
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
@@ -32,7 +32,7 @@ const Hero: React.FC = () => {
                     duration: 1,
                     delay: 0.75
                 }}
-                className={`${headerOneFontSize} font-bold text-opacity-0 text-gray`}>
+                className={`${headerOneFontSize} font-bold text-opacity-0 text-gray cursor-default`}>
                 <span className='bg-clip-text bg-gradient-to-r from-primary to-secondary'>{!titleVariant ? "Deesit" : "Dee"}</span>
             </motion.h1>
             <motion.div

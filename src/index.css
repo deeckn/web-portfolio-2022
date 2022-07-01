@@ -7,3 +7,7 @@
 * {
     font-family: 'Poppins', sans-serif;
 }
+
+*::selection {
+    background-color: rgba(238, 168, 73, 0.3);
+}

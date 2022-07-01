@@ -16,13 +16,15 @@ const ProjectList: React.FC = () => {
                     title='GIN ARAI DEE'
                     image={ProjectGinAraiDee}
                     imageAlt="GIN ARAI DEE Demo"
-                    description='An Android application written in Java. Provides food recommendations, food randomizer, bill splitting, and dietary planning.' />
+                    description='An Android application written in Java. Provides food recommendations, food randomizer, bill splitting, and dietary planning.'
+                    url="https://github.com/deeckn/GIN-ARAI-DEE" />
 
                 <ProjectCard
                     title='WMS'
                     image={ProjectWms}
                     imageAlt="Warehouse Management Demo"
-                    description='A warehouse storage management system made with PyQt, SQLAlchemy, and SQLite. Using the MVC architecture.' />
+                    description='A warehouse storage management system made with PyQt, SQLAlchemy, and SQLite. Using the MVC architecture.'
+                    url="https://github.com/deeckn/Warehouse-Management" />
             </div>
 
             <div className='flex flex-col gap-8 md:flex-row'>
@@ -30,13 +32,15 @@ const ProjectList: React.FC = () => {
                     title='Todo-List'
                     image={ProjectTodo}
                     imageAlt="Todo-list Demo"
-                    description='A simple TODO list android application using Java and SQLite.' />
+                    description='A simple TODO list android application using Java and SQLite.'
+                    url="https://github.com/deeckn/TODOLIST" />
 
                 <ProjectCard
                     title='GPA DEE MHAI'
                     image={ProjectGpa}
                     imageAlt="GPA Calculator Demo"
-                    description="It's hard to find an online GPA calculator with the same grading system as my university. So, why not build my own GPA calculator?" />
+                    description="It's hard to find an online GPA calculator with the same grading system as my university. So, why not build my own GPA calculator?"
+                    url="https://github.com/deeckn/GPA-DEE-MHAI" />
             </div>
 
             <div className='flex flex-col gap-8 md:flex-row'>
@@ -44,13 +48,15 @@ const ProjectList: React.FC = () => {
                     title='Dad Jokes'
                     image={ProjectJoke}
                     imageAlt="Dad Jokes API Fetch Demo"
-                    description='A fun website to fetch dad jokes from an API.' />
+                    description='A fun website to fetch dad jokes from an API.'
+                    url="https://github.com/deeckn/Dad-Jokes" />
 
                 <ProjectCard
                     title='Shunting Yard'
                     image={ProjectCalculator}
                     imageAlt="Shunting Yard Calculator Demo"
-                    description='A web calculator that utilizes the Shunting Yard algorithm to compute mathematical expressions. Using a combination of the Stack and Queue data structures.' />
+                    description='A web calculator that utilizes the Shunting Yard algorithm to compute mathematical expressions. Using a combination of the Stack and Queue data structures.'
+                    url="https://github.com/deeckn/ShuntingYard-Calculator" />
             </div>
         </section>
     )

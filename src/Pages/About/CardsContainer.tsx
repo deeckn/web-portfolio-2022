@@ -4,13 +4,22 @@ import { headerFourFontSize, paragraphFontSize, sectionPadding } from '../../the
 import ProfilePicture from '../../Assets/profilePicture.png'
 
 const CardsContainer: React.FC = () => {
+    const getAge = (dateOfBirth: Date) => {
+        let diff_ms = Date.now() - dateOfBirth.getTime();
+        let age_dt = new Date(diff_ms);
+
+        return Math.abs(age_dt.getUTCFullYear() - 1970);
+    }
+
+    const dateOfBirth = new Date(2002, 4, 6)
+
     return (
         <div className={`${sectionPadding} flex flex-col gap-16 bg-smoke dark:bg-dark justify-between xl:flex-row`}>
             <WindowCardContainer>
                 <img src={ProfilePicture} alt="Profile" className='rounded-md' />
                 <div className={`flex flex-col gap-2 mt-4 ${paragraphFontSize} text-smoke dark:text-dark`}>
                     <p><b>Name:</b> Dee</p>
-                    <p><b>Age:</b> 20</p>
+                    <p><b>Age:</b> {getAge(dateOfBirth)}</p>
                     <p><b>Major:</b> Software Engineering</p>
                     <p><b>Languages:</b> English, Thai</p>
                 </div>
